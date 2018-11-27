@@ -17,9 +17,7 @@ ms.component: B2C
 You can use the OAuth 2.0 authorization code grant in apps installed on a device to gain access to protected resources, such as web APIs. By using the Azure Active Directory B2C (Azure AD B2C) implementation of OAuth 2.0, you can add sign-up, sign-in,
 and other identity management tasks to your mobile and desktop apps. This article is language-independent. In the article, we describe how to send and receive HTTP messages without using any open-source libraries.
 
-<!-- TODO: Need link to libraries -->
-
-The OAuth 2.0 authorization code flow is described in [section 4.1 of the OAuth 2.0 specification](http://tools.ietf.org/html/rfc6749). You can use it for authentication and authorization in most [application types](active-directory-b2c-apps.md), including web applications and natively installed applications. You can use the OAuth 2.0 authorization code flow to securely acquire access tokens for your applicationss, which can be used to access resources that are secured by an [authorization server](active-directory-b2c-reference-protocols.md).
+The OAuth 2.0 authorization code flow is described in [section 4.1 of the OAuth 2.0 specification](http://tools.ietf.org/html/rfc6749). You can use it for authentication and authorization in most [application types](active-directory-b2c-apps.md), including web applications and natively installed applications. You can use the OAuth 2.0 authorization code flow to securely acquire access tokens and refresh tokens for your applications, which can be used to access resources that are secured by an [authorization server](active-directory-b2c-reference-protocols.md).  The refresh token allows the client to acquire new access (and refresh) tokens once the access token expires, typically after one hour.
 
 This article focuses on the **public clients** OAuth 2.0 authorization code flow. A public client is any client application that cannot be trusted to securely maintain the integrity of a secret password. This includes mobile apps, desktop applications, and essentially any application that runs on a device and needs to get access tokens. 
 
@@ -36,7 +34,7 @@ The authorization code flow begins with the client directing the user to the `/a
 
 ### Use a sign-in policy
 ```
-GET https://login.microsoftonline.com/fabrikamb2c.onmicrosoft.com/oauth2/v2.0/authorize?
+GET https://fabrikamb2c.b2clogin.com/fabrikamb2c.onmicrosoft.com/oauth2/v2.0/authorize?
 client_id=90c0fe63-bcf2-44d5-8fb7-b8bbc0b29dc6
 &response_type=code
 &redirect_uri=urn%3Aietf%3Awg%3Aoauth%3A2.0%3Aoob
@@ -48,7 +46,7 @@ client_id=90c0fe63-bcf2-44d5-8fb7-b8bbc0b29dc6
 
 ### Use a sign-up policy
 ```
-GET https://login.microsoftonline.com/fabrikamb2c.onmicrosoft.com/oauth2/v2.0/authorize?
+GET https://fabrikamb2c.b2clogin.com/fabrikamb2c.onmicrosoft.com/oauth2/v2.0/authorize?
 client_id=90c0fe63-bcf2-44d5-8fb7-b8bbc0b29dc6
 &response_type=code
 &redirect_uri=urn%3Aietf%3Awg%3Aoauth%3A2.0%3Aoob
@@ -60,7 +58,7 @@ client_id=90c0fe63-bcf2-44d5-8fb7-b8bbc0b29dc6
 
 ### Use an edit-profile policy
 ```
-GET https://login.microsoftonline.com/fabrikamb2c.onmicrosoft.com/oauth2/v2.0/authorize?
+GET https://fabrikamb2c.b2clogin.com/fabrikamb2c.onmicrosoft.com/oauth2/v2.0/authorize?
 client_id=90c0fe63-bcf2-44d5-8fb7-b8bbc0b29dc6
 &response_type=code
 &redirect_uri=urn%3Aietf%3Awg%3Aoauth%3A2.0%3Aoob
@@ -77,7 +75,7 @@ client_id=90c0fe63-bcf2-44d5-8fb7-b8bbc0b29dc6
 | redirect_uri |Required |The redirect URI of your app, where authentication responses are sent and received by your app. It must exactly match one of the redirect URIs that you registered in the portal, except that it must be URL-encoded. |
 | scope |Required |A space-separated list of scopes. A single scope value indicates to Azure Active Directory (Azure AD) both of the permissions that are being requested. Using the client ID as the scope indicates that your app needs an access token that can be used against your own service or web API, represented by the same client ID.  The `offline_access` scope indicates that your app needs a refresh token for long-lived access to resources. You also can use the `openid` scope to request an ID token from Azure AD B2C. |
 | response_mode |Recommended |The method that you use to send the resulting authorization code back to your app. It can be `query`, `form_post`, or `fragment`. |
-| state |Recommended |A value included in the request that is returned in the token response. It can be a string of any content that you want to use. Usually, a randomly generated unique value is  used, to prevent cross-site request forgery attacks. The state also is used to encode information about the user's state in the app before the authentication request occurred. For example, the page the user was on, or the policy that was being executed. |
+| state |Recommended |A value included in the request that can be a string of any content that you want to use. Usually, a randomly generated unique value is  used, to prevent cross-site request forgery attacks. The state also is used to encode information about the user's state in the app before the authentication request occurred. For example, the page the user was on, or the policy that was being executed. |
 | p |Required |The policy that is executed. It's the name of a policy that is created in your Azure AD B2C directory. The policy name value should begin with **b2c\_1\_**. To learn more about policies, see [Azure AD B2C built-in policies](active-directory-b2c-reference-policies.md). |
 | prompt |Optional |The type of user interaction that is required. Currently, the only valid value is `login`, which forces the user to enter their credentials on that request. Single sign-on will not take effect. |
 
@@ -118,7 +116,7 @@ Now that you've acquired an authorization code, you can redeem the `code` for a 
 
 ```
 POST fabrikamb2c.onmicrosoft.com/oauth2/v2.0/token?p=b2c_1_sign_in HTTP/1.1
-Host: https://login.microsoftonline.com
+Host: https://fabrikamb2c.b2clogin.com
 Content-Type: application/x-www-form-urlencoded
 
 grant_type=authorization_code&client_id=90c0fe63-bcf2-44d5-8fb7-b8bbc0b29dc6&scope=90c0fe63-bcf2-44d5-8fb7-b8bbc0b29dc6 offline_access&code=AwABAAAAvPM1KaPlrEqdFSBzjqfTGBCmLdgfSTLEMPGYuNHSUYBrq...&redirect_uri=urn:ietf:wg:oauth:2.0:oob
@@ -183,7 +181,7 @@ Access tokens and ID tokens are short-lived. After they expire, you must refresh
 
 ```
 POST fabrikamb2c.onmicrosoft.com/oauth2/v2.0/token?p=b2c_1_sign_in HTTP/1.1
-Host: https://login.microsoftonline.com
+Host: https://fabrikamb2c.b2clogin.com
 Content-Type: application/x-www-form-urlencoded
 
 grant_type=refresh_token&client_id=90c0fe63-bcf2-44d5-8fb7-b8bbc0b29dc6&client_secret=JqQX2PNo9bpM0uEihUPzyrh&scope=90c0fe63-bcf2-44d5-8fb7-b8bbc0b29dc6 offline_access&refresh_token=AwABAAAAvPM1KaPlrEqdFSBzjqfTGBCmLdgfSTLEMPGYuNHSUYBrq...&redirect_uri=urn:ietf:wg:oauth:2.0:oob

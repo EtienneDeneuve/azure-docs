@@ -35,7 +35,7 @@ ClearDB is a MySQL hosting service and manages the MySQL infrastructure for you.
 ## Do I need a credit card for the Web app + MySQL template in the Azure Marketplace?
 This depends on the type of subscription you are using. Here are some commonly used subscription types:
 
-* [Pay as you Go](/offers/ms-azr-0003p/): Requires a credit card, and when you purchase a paid MySQL database your credit card is charged.
+* [Pay as you Go](https://azure.microsoft.com/offers/ms-azr-0003p/): Requires a credit card, and when you purchase a paid MySQL database your credit card is charged.
 * [Free trial](https://azure.microsoft.com/pricing/free-trial/): Includes credits for use with Microsoft Azure services but doesn't allow purchase of third-party resources. To purchase third-party services or a paid MySQL database you need to use a credit card enabled subscription. For Web Apps, you can create a FREE ClearDB MySQL database.
 * [MSDN subscription](https://azure.microsoft.com/pricing/member-offers/msdn-benefits/) and **MSDN Dev Test Pay as you go**: Similar to Free trial, an MSDN subscription requires you to have a credit card to purchase a paid MySQL solution from ClearDB.
 * [Enterprise Agreement (EA)](https://azure.microsoft.com/pricing/enterprise-agreement/): EA customers are billed against their EA each quarter for all of their Azure Marketplace (third-party) purchases on a separate, consolidated invoice. You are billed outside the monetary commitment for any marketplace purchases. Please note that, at this time, Azure Store is not available to customers enrolled in Azerbaijan, Croatia, Norway and Puerto Rico. 
@@ -100,8 +100,8 @@ Indirect EA customers can find their Azure Marketplace subscriptions on the **Ma
 Access to Azure Marketplace for third-party services can be managed by your EA Azure enrollment administrators. They can disable or re-enable access to 3rd party purchases from the Store in Manage Accounts and Subscriptions under the Accounts section in the Enterprise Portal.
 
 ## Who do I contact for questions about my bill for ClearDB services in my EA subscription?
-Contact [Enterprise Customer Support](http://aka.ms/AzureEntSupport) with regards to billing under their EA enrollment. The EA Portal Support Team will answer your question or help resolve your issue.
+Contact [Enterprise Customer Support](https://aka.ms/AzureEntSupport) with regards to billing under their EA enrollment. The EA Portal Support Team will answer your question or help resolve your issue.
 
 ## More information
-[Azure Marketplace FAQ](/marketplace/faq/)
+[Azure Marketplace FAQ](https://azure.microsoft.com/marketplace/faq/)
 

@@ -2,19 +2,14 @@
 title: 'Tutorial: Perform extract, transform, load (ETL) operations using Hive on HDInsight - Azure'
 description: Learn how to extract data from a raw CSV dataset, transform it using Hive on HDInsight, and then load the transformed data into Azure SQL database by using Sqoop.
 services: storage
-documentationcenter: ''
 author: jamesbak
-manager: jahogg
 tags: azure-portal
-
 ms.component: data-lake-storage-gen2
 ms.service: storage
-ms.devlang: na
 ms.topic: tutorial
 ms.date: 06/27/2018
 ms.author: jamesbak
 ms.custom: H1Hack27Feb2017,hdinsightactive,mvc
-#Customer intent: As a data analyst, I need to load some data into a Hadoop cluster, transform, and then export it to an Azure SQL database
 ---
 
 # Tutorial: Extract, transform, and load data using Apache Hive on Azure HDInsight
@@ -43,7 +38,7 @@ If you don't have an Azure subscription, [create a free account](https://azure.m
 
 * **Azure SQL Database**. You use an Azure SQL database as a destination data store. If you don't have a SQL database, see [Create an Azure SQL database in the Azure portal](../../sql-database/sql-database-get-started.md).
 
-* **Azure CLI 2.0**. If you haven't installed the Azure CLI, see [Install the Azure CLI](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest) for more steps.
+* **Azure CLI**. If you haven't installed the Azure CLI, see [Install the Azure CLI](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest) for more steps.
 
 * **An SSH client**. For more information, see [Connect to HDInsight (Hadoop) using SSH](../../hdinsight/hdinsight-hadoop-linux-use-ssh-unix.md).
 
@@ -67,7 +62,7 @@ If you don't have an Azure subscription, [create a free account](https://azure.m
 
 ## Upload data to an HDInsight cluster
 
-There are many ways to upload data to the storage associated with an HDInsight cluster. In this section, you use `scp` to upload data. To learn about other ways to upload data, see [Use Distcp to copy data between Azure Storage Blobs and Data Lake Storage Gen2 Preview](use-distcp.md).
+There are many ways to upload data to the storage associated with an HDInsight cluster. In this section, you use `scp` to upload data. To learn about other ways to upload data, see [Use Distcp to copy data between an existing storage account and a new storage account with Data Lake Storage Gen2 enabled](use-distcp.md).
 
 1. Open a command prompt and use the following command to upload the .zip file to the HDInsight cluster head node:
 

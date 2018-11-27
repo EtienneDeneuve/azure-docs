@@ -1,8 +1,8 @@
 ---
 title: Provision a simulated X.509 device to Azure IoT Hub using Java and enrollment groups | Microsoft Docs
 description: Azure Tutorial - Create and provision a simulated X.509 device using Java device and service SDK and enrollment groups for IoT Hub Device Provisioning Service
-author: bryanla
-ms.author: bryanla
+author: wesmc7777
+ms.author: wesmc
 ms.date: 01/04/2018
 ms.topic: tutorial
 ms.service: iot-dps
@@ -21,7 +21,7 @@ Make sure to complete the steps in the [Setup IoT Hub Device Provisioning Servic
 
 ## Prepare the environment 
 
-1. Make sure you have [Java SE Development Kit 8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) installed on your machine.
+1. Make sure you have [Java SE Development Kit 8](https://aka.ms/azure-jdks) installed on your machine.
 
 1. Download and install [Maven](https://maven.apache.org/install.html).
 

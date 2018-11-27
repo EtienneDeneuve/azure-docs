@@ -13,16 +13,16 @@ ms.date: 01/24/2018
 ms.author: sngun
 
 ---
+
+# Performance tips for Azure Cosmos DB and .NET
+
 > [!div class="op_single_selector"]
 > * [Async Java](performance-tips-async-java.md)
 > * [Java](performance-tips-java.md)
 > * [.NET](performance-tips.md)
 > 
-> 
 
-# Performance tips for Azure Cosmos DB and .NET
-
-Azure Cosmos DB is a fast and flexible distributed database that scales seamlessly with guaranteed latency and throughput. You do not have to make major architecture changes or write complex code to scale your database with Azure Cosmos DB. Scaling up and down is as easy as making a single API call or [SDK method call](set-throughput.md#set-throughput-sdk). However, because Azure Cosmos DB is accessed via network calls there are client-side optimizations you can make to achieve peak performance when using the [SQL .NET SDK](documentdb-sdk-dotnet.md).
+Azure Cosmos DB is a fast and flexible distributed database that scales seamlessly with guaranteed latency and throughput. You do not have to make major architecture changes or write complex code to scale your database with Azure Cosmos DB. Scaling up and down is as easy as making a single API call. To learn more, see [how to provision container throughput](how-to-provision-container-throughput.md) or [how to provision database throughput](how-to-provision-database-throughput.md). However, because Azure Cosmos DB is accessed via network calls there are client-side optimizations you can make to achieve peak performance when using the [SQL .NET SDK](documentdb-sdk-dotnet.md).
 
 So if you're asking "How can I improve my database performance?" consider the following options:
 
@@ -39,7 +39,7 @@ So if you're asking "How can I improve my database performance?" consider the fo
 
    * Direct Mode
 
-     Direct mode supports connectivity through TCP and HTTPS protocols. Currently, direct is supported in .NET Standard 2.0 for Windows platform only. When using Direct Mode, there are two protocol options available:
+     Direct mode supports connectivity through TCP and HTTPS protocols. Currently, direct is supported in .NET Standard 2.0. When using Direct Mode, there are two protocol options available:
 
     * TCP
     * HTTPS
@@ -117,7 +117,7 @@ So if you're asking "How can I improve my database performance?" consider the fo
     Reducing the frequency of garbage collection may help in some cases. In .NET, set [gcServer](https://msdn.microsoft.com/library/ms229357.aspx) to true.
 6. **Implement backoff at RetryAfter intervals**
 
-    During performance testing, you should increase load until a small rate of requests get throttled. If throttled, the client application should backoff on throttle for the server-specified retry interval. Respecting the backoff ensures that you spend minimal amount of time waiting between retries. Retry policy support is included in Version 1.8.0 and above of the SQL [.NET](sql-api-sdk-dotnet.md) and [Java](sql-api-sdk-java.md), version 1.9.0 and above of the [Node.js](sql-api-sdk-node.md) and [Python](sql-api-sdk-python.md), and all supported versions of the [.NET Core](sql-api-sdk-dotnet-core.md) SDKs. For more information, see [Exceeding reserved throughput limits](request-units.md#RequestRateTooLarge) and [RetryAfter](https://msdn.microsoft.com/library/microsoft.azure.documents.documentclientexception.retryafter.aspx).
+    During performance testing, you should increase load until a small rate of requests get throttled. If throttled, the client application should backoff on throttle for the server-specified retry interval. Respecting the backoff ensures that you spend minimal amount of time waiting between retries. Retry policy support is included in Version 1.8.0 and above of the SQL [.NET](sql-api-sdk-dotnet.md) and [Java](sql-api-sdk-java.md), version 1.9.0 and above of the [Node.js](sql-api-sdk-node.md) and [Python](sql-api-sdk-python.md), and all supported versions of the [.NET Core](sql-api-sdk-dotnet-core.md) SDKs. For more information, [RetryAfter](https://msdn.microsoft.com/library/microsoft.azure.documents.documentclientexception.retryafter.aspx).
     
     With version 1.19 and later of the .NET SDK, there is a mechanism to log additional diagnostic information and troubleshoot latency issues as shown in the following sample. You can log the diagnostic string for requests that have a higher read latency. The captured diagnostic string will help you understand the number of times you observed 429s for a given request.
     ```csharp
@@ -130,9 +130,10 @@ So if you're asking "How can I improve my database performance?" consider the fo
     If you are testing at high throughput levels (>50,000 RU/s), the client application may become the bottleneck due to the machine capping out on CPU or Network utilization. If you reach this point, you can continue to push the Azure Cosmos DB account further by scaling out your client applications across multiple servers.
 8. **Cache document URIs for lower read latency**
 
-    Cache document URIs whenever possible for the best read performance.
+    Cache document URIs whenever possible for the best read performance. You have to define logic to cache the resourceid when you create the resource. Resourceid based lookups are faster than name based lookups, so caching these values improves the performance. 
+
    <a id="tune-page-size"></a>
-9. **Tune the page size for queries/read feeds for better performance**
+1. **Tune the page size for queries/read feeds for better performance**
 
     When performing a bulk read of documents using read feed functionality (for example, ReadDocumentFeedAsync) or when issuing a SQL query, the results are returned in a segmented fashion if the result set is too large. By default, results are returned in chunks of 100 items or 1 MB, whichever limit is hit first.
 

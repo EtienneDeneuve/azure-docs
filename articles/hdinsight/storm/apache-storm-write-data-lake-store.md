@@ -1,20 +1,14 @@
 ---
-title: Apache Storm write to Storage/Data Lake Store - Azure HDInsight | Microsoft Docs
-description: Learn how to use the Apache Storm to write to the HDFS-compatible storage for HDInsight. Azure Storage or Azure Data Lake Store provide the HDFS-comptabile storage for HDInsight. This document, and the associated example, demonstrate how the HdfsBolt component can be used to write to the default storage of a Storm on HDInsight cluster.
+title: Apache Storm write to Storage/Data Lake Store - Azure HDInsight 
+description: Learn how to use the Apache Storm to write to the HDFS-compatible storage for HDInsight.
 services: hdinsight
-documentationcenter: na
-author: Blackmist
-manager: jhubbard
-editor: cgronlun
-
-ms.assetid: 1df98653-a6c8-4662-a8c6-5d288fc4f3a6
 ms.service: hdinsight
+author: hrasheed-msft
+ms.author: hrasheed
+ms.reviewer: jasonh
 ms.custom: hdinsightactive
-ms.devlang: na
 ms.topic: conceptual
 ms.date: 02/27/2018
-ms.author: larryfr
-
 ---
 # Write to HDFS from Apache Storm on HDInsight
 
@@ -29,7 +23,7 @@ The project containing this topology is available as a download from [https://gi
 
 To compile this project, you need the following configuration for your development environment:
 
-* [Java JDK 1.8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) or higher. HDInsight 3.5 or higher require Java 8.
+* [Java JDK 1.8](https://aka.ms/azure-jdks) or higher. HDInsight 3.5 or higher require Java 8.
 
 * [Maven 3.x](https://maven.apache.org/download.cgi)
 
@@ -199,7 +193,7 @@ To view the data, use the following command:
 
 A list of the files created by this topology is displayed.
 
-The following list is an example of the data retuned by the previous commands:
+The following list is an example of the data returned by the previous commands:
 
     Found 30 items
     -rw-r-----+  1 sshuser sshuser       488000 2017-03-03 19:13 /stormdata/hdfs-bolt-3-0-1488568403092.txt

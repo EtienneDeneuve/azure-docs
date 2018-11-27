@@ -3,7 +3,7 @@ title: 'Azure Active Directory Domain Services: Join a Windows Server VM to a ma
 description: Join a Windows Server virtual machine to Azure AD DS
 services: active-directory-ds
 documentationcenter: ''
-author: mahesh-unnikrishnan
+author: eringreenlee
 manager: mtillman
 editor: curtand
 
@@ -13,9 +13,9 @@ ms.component: domain-services
 ms.workload: identity
 ms.tgt_pltfrm: na
 ms.devlang: na
-ms.topic: article
+ms.topic: conceptual
 ms.date: 06/21/2018
-ms.author: maheshu
+ms.author: ergreenl
 
 ---
 # Join a Windows Server virtual machine to a managed domain

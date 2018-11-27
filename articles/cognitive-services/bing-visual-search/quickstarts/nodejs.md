@@ -1,19 +1,19 @@
 ---
-title: JavaScript Quickstart for Bing Visual Search API | Microsoft Docs
-titleSuffix: Bing Web Search APIs - Cognitive Services
-description: Shows how to upload an image to Bing Visual Search API and get back insights about the image.
+title: "Quickstart: Create a visual search query, Node.js - Bing Visual Search"
+titleSuffix: Azure Cognitive Services
+description: How to upload an image to Bing Visual Search API and get back insights about the image.
 services: cognitive-services
 author: swhite-msft
-manager: rosh
+manager: cgronlun
 
 ms.service: cognitive-services
-ms.technology: bing-visual-search
-ms.topic: article
+ms.component: bing-visual-search
+ms.topic: quickstart
 ms.date: 5/16/2018
 ms.author: scottwhi
 ---
 
-# Your first Bing Visual Search query in JavaScript
+# Quickstart: Your first Bing Visual Search query in JavaScript
 
 Bing Visual Search API returns information about an image that you provide. You can provide the image by using the URL of the image, an insights token, or by uploading an image. For information about these options, see [What is Bing Visual Search API?](../overview.md) This article demonstrates uploading an image. Uploading an image could be useful in mobile scenarios where you take a picture of a well-known landmark and get back information about it. For example, the insights could include trivia about the landmark. 
 
@@ -31,10 +31,9 @@ Content-Disposition: form-data; name="image"; filename="myimagefile.jpg"
 This article includes a simple console application that sends a Bing Visual Search API request and displays the JSON search results. While this application is written in JavaScript, the API is a RESTful Web service compatible with any programming language that can make HTTP requests and parse JSON. 
 
 ## Prerequisites
+Get a [Cognitive Services access key](https://azure.microsoft.com/try/cognitive-services/) under **Search**.  See also [Cognitive Services Pricing - Bing Search API](https://azure.microsoft.com/pricing/details/cognitive-services/search-api/).
 
 You need [Node.js 6](https://nodejs.org/en/download/) to run this code.
-
-For this quickstart, you may use a [free trial](https://azure.microsoft.com/try/cognitive-services/?api=bing-web-search-api) subscription key or a paid subscription key.
 
 ## Running the application
 

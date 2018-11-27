@@ -3,7 +3,7 @@ title: How to use the Azure WebJobs SDK
 description: Learn more about how to write code for the WebJobs SDK. Create  event-driven background processing jobs that access data in Azure services and third-party services.
 services: app-service\web, storage
 documentationcenter: .net
-author: tdykstra
+author: ggailey777
 manager: cfowler
 editor: 
 
@@ -13,7 +13,7 @@ ms.tgt_pltfrm: na
 ms.devlang: dotnet
 ms.topic: article
 ms.date: 04/27/2018
-ms.author: tdykstra
+ms.author: glenga
 ---
 
 # How to use the Azure WebJobs SDK for event-driven background processing
@@ -458,7 +458,7 @@ We recommend the logging framework that was developed for ASP.NET, and the [Get 
 
 ### Log filtering
 
-Every log created by an `ILogger` instance has an associated `Category` and `Level`. [LogLevel](https://docs.microsoft.com/aspnet/core/api/microsoft.extensions.logging.loglevel#Microsoft_Extensions_Logging_LogLevel) is an enumeration, and the integer code indicates relative importance:
+Every log created by an `ILogger` instance has an associated `Category` and `Level`. [LogLevel](/dotnet/api/microsoft.extensions.logging.loglevel) is an enumeration, and the integer code indicates relative importance:
 
 |LogLevel    |Code|
 |------------|---|
@@ -470,7 +470,7 @@ Every log created by an `ILogger` instance has an associated `Category` and `Lev
 |Critical    | 5 |
 |None        | 6 |
 
-Each category can be independently filtered to a particular [LogLevel](https://docs.microsoft.com/aspnet/core/api/microsoft.extensions.logging.loglevel). For example, you might want to see all logs for blob trigger processing but only `Error` and higher for everything else.
+Each category can be independently filtered to a particular [LogLevel](/dotnet/api/microsoft.extensions.logging.loglevel). For example, you might want to see all logs for blob trigger processing but only `Error` and higher for everything else.
 
 To make it easier to specify filtering rules, the WebJobs SDK provides the `LogCategoryFilter` that can be passed into many of the existing logging providers, including Application Insights and Console.
 

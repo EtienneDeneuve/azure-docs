@@ -33,9 +33,8 @@ The URLs for Log Analytics are different in Azure Government:
 For secured virtual networks, you will want to allow Network Security Groups (NSGs) access to certain IP addresses and ports. For Azure Government, you should allow the follow IP addresses (all with an Allowed port of 443):
 
 | Region | Allowed IP addresses | Allowed port |
-| ---- | ---- | ---- | ---- |
+| ---- | ---- | ---- |
 | USGov Iowa | 13.72.184.124</br>13.72.190.110 | 443 |
-| USGov Texas | 52.238.116.212</br>52.238.112.86 | 443 |
 | USGov Virginia | 13.72.49.126</br>13.72.55.55 | 443 |
 
 For more information, see [HDInsight public documentation](../hdinsight/hadoop/apache-hadoop-introduction.md).

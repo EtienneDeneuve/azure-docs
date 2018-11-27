@@ -1,13 +1,13 @@
 ---
-title: Use the sample datasets in Machine Learning Studio | Microsoft Docs
+title: Use the sample datasets - Azure Machine Learning Studio | Microsoft Docs
 description: Descriptions of the datasets used in sample models included in Machine Learning Studio. You can use these sample datasets for your experiments.
 services: machine-learning
 documentationcenter: ''
-author: heatherbshapiro
-ms.author: hshapiro
+author: ericlicoding
+ms.custom: "(previous ms.author=hshapiro, author=heatherbshapiro)"
+ms.author: amlstudiodocs
 manager: hjerez
 editor: cgronlun
-
 ms.assetid: 03a0b844-e8a7-4896-996f-d3c7a0db7a50
 ms.service: machine-learning
 ms.component: studio
@@ -16,7 +16,6 @@ ms.tgt_pltfrm: na
 ms.devlang: na
 ms.topic: article
 ms.date: 01/19/2018
-
 ---
 # Use the sample datasets in Azure Machine Learning Studio
 [top]: #machine-learning-sample-datasets
@@ -338,7 +337,7 @@ Also, note that the number of background events (h, for hadronic showers) is und
 <tr>
   <td>Weather Dataset</td>
   <td>
-Hourly land-based weather observations from NOAA (<a href="http://cdo.ncdc.noaa.gov/qclcd_ascii/, merged data from 201304 to 201310">merged data from 201304 to 201310</a>).
+Hourly land-based weather observations from NOAA (<a href="http://az754797.vo.msecnd.net/data/WeatherDataset.csv">merged data from 201304 to 201310</a>).
 <p></p>
 The weather data covers observations made from airport weather stations, covering the time period April-October 2013. Before uploading to Azure Machine Learning Studio, the dataset was processed as follows:
 <ul>

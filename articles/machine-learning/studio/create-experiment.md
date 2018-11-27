@@ -4,20 +4,19 @@ description: This machine learning tutorial walks you through an easy data scien
 keywords: experiment,linear regression,machine learning algorithms,machine learning tutorial,predictive modeling techniques,data science experiment
 services: machine-learning
 documentationcenter: ''
-author: heatherbshapiro
-ms.author: hshapiro
+author: ericlicoding
+ms.custom: "(previous ms.author=hshapiro, author=heatherbshapiro)"
+ms.author: amlstudiodocs
 manager: hjerez
 editor: cgronlun
-
 ms.assetid: b6176bb2-3bb6-4ebf-84d1-3598ee6e01c6
 ms.service: machine-learning
 ms.component: studio
 ms.workload: data-services
 ms.tgt_pltfrm: na
 ms.devlang: na
-ms.topic: hero-article
+ms.topic: tutorial
 ms.date: 03/20/2017
-
 ---
 
 # Machine learning tutorial: Create your first data science experiment in Azure Machine Learning Studio

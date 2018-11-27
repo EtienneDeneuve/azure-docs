@@ -10,7 +10,7 @@ editor: ''
 ms.assetid: 5d80bf91-16c3-40b3-82fc-e0805e6708db
 ms.service: security-center
 ms.devlang: na
-ms.topic: article
+ms.topic: conceptual
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.date: 03/05/2018
@@ -64,13 +64,13 @@ Once you finish the installation, the integration is completed, and you will be 
 In this document, you learned how to connect Microsoft ATA to Security Center. To learn more about Security Center, see the following articles:
 
 * [Connecting Azure Active Directory Identity Protection to Azure Security Center](security-center-aadip-integration.md)
-* [Setting security policies in Azure Security Center](security-center-policies.md) — Learn how to configure security policies for your Azure subscriptions and resource groups.
+* [Setting security policies in Azure Security Center](security-center-azure-policy.md) — Learn how to configure security policies for your Azure subscriptions and resource groups.
 * [Managing security recommendations in Azure Security Center](security-center-recommendations.md) — Learn how recommendations help you protect your Azure resources.
 * [Security health monitoring in Azure Security Center](security-center-monitoring.md) — Learn how to monitor the health of your Azure resources.
 * [Managing and responding to security alerts in Azure Security Center](security-center-managing-and-responding-alerts.md) — Learn how to manage and respond to security alerts.
 * [Monitoring partner solutions with Azure Security Center](security-center-partner-solutions.md) — Learn how to monitor the health status of your partner solutions.
 - [Azure Security Center data security](security-center-data-security.md) - Learn how data is managed and safeguarded in Security Center.
 * [Azure Security Center FAQ](security-center-faq.md) — Find frequently asked questions about using the service.
-* [Azure Security blog](http://blogs.msdn.com/b/azuresecurity/) — Get the latest Azure security news and information.
+* [Azure Security blog](https://blogs.msdn.com/b/azuresecurity/) — Get the latest Azure security news and information.
 
 

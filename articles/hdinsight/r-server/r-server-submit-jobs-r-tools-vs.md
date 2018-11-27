@@ -1,24 +1,18 @@
 ---
-title: Submit jobs from R Tools for Visual Studio - Azure HDInsight | Microsoft Docs
+title: Submit jobs from R Tools for Visual Studio - Azure HDInsight 
 description: Submit R jobs from your local Visual Studio machine to an HDInsight cluster.
 services: hdinsight
-documentationcenter: ''
-author: maxluk
-manager: jhubbard
-editor: cgronlun
-tags: azure-portal
-
 ms.service: hdinsight
+author: maxluk
+ms.author: maxluk
+ms.reviewer: jasonh
 ms.custom: hdinsightactive
-ms.devlang: na
 ms.topic: conceptual
 ms.date: 06/27/2018
-ms.author: maxluk
-
 ---
 # Submit jobs from R Tools for Visual Studio
 
-[R Tools for Visual Studio](https://www.visualstudio.com/vs/rtvs/) (RTVS) is a free, open-source extension for the Community (free), Professional, and Enterprise editions of both [Visual Studio 2017](https://www.visualstudio.com/downloads/), and [Visual Studio 2015 Update 3](http://go.microsoft.com/fwlink/?LinkId=691129) or higher.
+[R Tools for Visual Studio](https://www.visualstudio.com/vs/rtvs/) (RTVS) is a free, open-source extension for the Community (free), Professional, and Enterprise editions of both [Visual Studio 2017](https://www.visualstudio.com/downloads/), and [Visual Studio 2015 Update 3](https://go.microsoft.com/fwlink/?LinkId=691129) or higher.
 
 RTVS enhances your R workflow by offering tools such as the [R Interactive window](https://docs.microsoft.com/visualstudio/rtvs/interactive-repl) (REPL), intellisense (code completion), [plot visualization](https://docs.microsoft.com/visualstudio/rtvs/visualizing-data) through R libraries such as ggplot2 and ggviz, [R code debugging](https://docs.microsoft.com/visualstudio/rtvs/debugging), and more.
 

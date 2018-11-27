@@ -1,20 +1,15 @@
 ---
-title: Apache Storm example Java topology - Azure HDInsight | Microsoft Docs
+title: Apache Storm example Java topology - Azure HDInsight 
 description: Learn how to create Apache Storm topologies in Java by creating an example word count topology.
 services: hdinsight
-documentationcenter: ''
-author: Blackmist
-manager: jhubbard
-editor: cgronlun
-tags: azure-portal
+author: hrasheed-msft
+ms.reviewer: jasonh
 keywords: apache storm,apache storm example,storm java,storm topology example
 
-ms.assetid: a8838f29-9c08-4fd9-99ef-26655d1bf6d7
 ms.service: hdinsight
-ms.devlang: java
 ms.topic: conceptual
 ms.date: 02/20/2018
-ms.author: larryfr
+ms.author: hrasheed
 ms.custom: H1Hack27Feb2017,hdinsightactive,hdiseo17may2017
 
 ---
@@ -29,7 +24,7 @@ After completing the steps in this document, you can deploy the topology to Apac
 
 ## Prerequisites
 
-* [Java Developer Kit (JDK) version 8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
+* [Java Developer Kit (JDK) version 8](https://aka.ms/azure-jdks)
 
 * [Maven (https://maven.apache.org/download.cgi)](https://maven.apache.org/download.cgi): Maven is a project build system for Java projects.
 

@@ -3,7 +3,7 @@ title: 'Azure Active Directory Domain Services: Supported regions | Microsoft Do
 description: Supported Azure regions for Azure AD Domain Services
 services: active-directory-ds
 documentationcenter: ''
-author: mahesh-unnikrishnan
+author: eringreenlee
 manager: mtillman
 editor: curtand
 
@@ -13,9 +13,9 @@ ms.component: domain-services
 ms.workload: identity
 ms.tgt_pltfrm: na
 ms.devlang: na
-ms.topic: article
+ms.topic: conceptual
 ms.date: 03/06/2017
-ms.author: maheshu
+ms.author: ergreenl
 
 ---
 # Azure AD Domain Services - Supported regions

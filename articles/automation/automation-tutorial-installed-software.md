@@ -35,7 +35,7 @@ To complete this tutorial, you need:
 
 ## Log in to Azure
 
-Log in to the Azure portal at http://portal.azure.com.
+Log in to the Azure portal at https://portal.azure.com.
 
 ## Enable Change tracking and Inventory
 
@@ -107,7 +107,7 @@ ConfigurationData
 | summarize arg_max(TimeGenerated, *) by SoftwareName, Computer
 ```
 
-To learn more about running and searching log files in Log Analytics, see [Azure Log Analytics](https://docs.loganalytics.io/index).
+To learn more about running and searching log files in Log Analytics, see [Azure Log Analytics](../log-analytics/log-analytics-queries.md).
 
 ### Single machine inventory
 

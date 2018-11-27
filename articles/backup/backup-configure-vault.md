@@ -7,7 +7,7 @@ manager: carmonm
 keywords: backup vault; back up a Windows server; backup windows;
 ms.service: backup
 ms.topic: conceptual
-ms.date: 1/5/2018
+ms.date: 8/5/2018
 ms.author: markgal
 ---
 # Back up a Windows Server or client to Azure using the Resource Manager deployment model
@@ -244,7 +244,7 @@ After the initial backup is completed, the **Job completed** status appears in t
 ![IR complete](./media/backup-configure-vault/ircomplete.png)
 
 ## Questions?
-If you have questions, or if there is any feature that you would like to see included, [send us feedback](http://aka.ms/azurebackup_feedback).
+If you have questions, or if there is any feature that you would like to see included, [send us feedback](https://aka.ms/azurebackup_feedback).
 
 ## Next steps
 For additional information about backing up VMs or other workloads, see:

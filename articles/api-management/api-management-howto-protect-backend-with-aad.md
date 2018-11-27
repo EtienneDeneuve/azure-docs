@@ -117,6 +117,9 @@ In this example, the Developer Console is the client-app. The following steps de
 
 6. Specify the **Authorization endpoint URL** and **Token endpoint URL**. Retrieve these values from the **Endpoints** page in your Azure AD tenant. Browse to the **App registrations** page again, and select **Endpoints**.
 
+    >[!NOTE]
+    > Use the **v1** endpoints here
+
 7. Copy the **OAuth 2.0 Authorization Endpoint**, and paste it into the **Authorization endpoint URL** text box.
 
 8. Copy the **OAuth 2.0 Token Endpoint**, and paste it into the **Token endpoint URL** text box. In addition to pasting in the token endpoint, add a body parameter named **resource**. For the value of this parameter, use the **Application ID** for the back-end app.
@@ -189,10 +192,10 @@ You can use the [Validate JWT](api-management-access-restriction-policies.md#Val
 
 ## Build an application to call the API
 
-In this guide, you used the Developer Console in API Management as the sample client application to call the `Echo API` protected by OAuth 2.0. To learn more about how to build an application and implement OAuth 2.0, see [Azure Active Directory code samples](../active-directory/develop/active-directory-code-samples.md).
+In this guide, you used the Developer Console in API Management as the sample client application to call the `Echo API` protected by OAuth 2.0. To learn more about how to build an application and implement OAuth 2.0, see [Azure Active Directory code samples](../active-directory/develop/sample-v1-code.md).
 
 ## Next steps
-* Learn more about [Azure Active Directory and OAuth2.0](../active-directory/develop/active-directory-authentication-scenarios.md).
+* Learn more about [Azure Active Directory and OAuth2.0](../active-directory/develop/authentication-scenarios.md).
 * Check out more [videos](https://azure.microsoft.com/documentation/videos/index/?services=api-management) about API Management.
 * For other ways to secure your back-end service, see [Mutual Certificate authentication](api-management-howto-mutual-certificates.md).
 

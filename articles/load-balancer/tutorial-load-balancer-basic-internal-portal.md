@@ -1,5 +1,5 @@
 ---
-title: Tutorial:Create a public Basic Load Balancer - Azure portal | Microsoft Docs
+title: Tutorial - Create a public Basic Load Balancer - Azure portal | Microsoft Docs
 description: This tutorial shows you how to create an internal Basic Load Balancer by using the Azure portal.
 services: load-balancer
 documentationcenter: na
@@ -98,7 +98,7 @@ In this section, you create two virtual machines for the backend pool of your Ba
 
 ## Create Basic Load Balancer resources
 
-In this section, you  configure load balancer settings for a backend address pool and a health probe, and specify load balancer and NAT rules.
+In this section, you  configure load balancer settings for a backend address pool and a health probe, and specify load balancer rules.
 
 
 ### Create a backend address pool

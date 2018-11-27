@@ -1,20 +1,14 @@
 ---
-title: Use Apache Spark to analyze data in Azure Data Lake Store | Microsoft Docs
+title: Use Apache Spark to analyze data in Azure Data Lake Store 
 description: Run Spark jobs to analyze data stored in Azure Data Lake Store
 services: hdinsight
-documentationcenter: ''
-author: nitinme
-manager: jhubbard
-editor: cgronlun
-
-ms.assetid: 1f174323-c17b-428c-903d-04f0e272784c
 ms.service: hdinsight
+author: hrasheed-msft
+ms.author: hrasheed
+ms.reviewer: jasonh
 ms.custom: hdinsightactive
-ms.devlang: na
 ms.topic: conceptual
 ms.date: 02/21/2018
-ms.author: nitinme
-
 ---
 
 # Use HDInsight Spark cluster to analyze data in Data Lake Store
@@ -35,7 +29,7 @@ In this tutorial, you use Jupyter notebook available with HDInsight Spark cluste
 >
 >
 
-If you created an HDInsight cluster with Data Lake Store as additional storage and Azure Storage Blob as default storage, you should first copy over some sample data to the Data Lake Store account. You can use the sample data from the Azure Storage Blob associated with the HDInsight cluster. You can use the [ADLCopy tool](http://aka.ms/downloadadlcopy) to do so. Download and install the tool from the link.
+If you created an HDInsight cluster with Data Lake Store as additional storage and Azure Storage Blob as default storage, you should first copy over some sample data to the Data Lake Store account. You can use the sample data from the Azure Storage Blob associated with the HDInsight cluster. You can use the [ADLCopy tool](https://aka.ms/downloadadlcopy) to do so. Download and install the tool from the link.
 
 1. Open a command prompt and navigate to the directory where AdlCopy is installed, typically `%HOMEPATH%\Documents\adlcopy`.
 
